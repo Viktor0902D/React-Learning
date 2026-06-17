@@ -6,6 +6,7 @@ const fetchMoviesAPI = async (searchQuery) => {
       if (searchQuery.toLowerCase() === "error") {
         reject(new Error("500: Movie Database is offline."));
       }
+      
       if (!searchQuery.trim()) {
         resolve([]);
       } else {
